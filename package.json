@@ -1,7 +1,7 @@
 {
-  "name": "shebang-it",
+  "name": "new",
   "version": "0.0.0",
-  "description": "shebang-it",
+  "description": "new",
   "keywords": [
     "cli",
     "util",
@@ -11,21 +11,22 @@
     "brightsole"
   ],
   "main": "index.js",
-  "repository": "git@github.com:one19/shebang-it.git",
+  "repository": "git@github.com/brightsole/new.git",
   "author": "Drew Showalter <maelstroswim@gmail.com>",
   "license": "MIT",
   "bin": {
-    "shebang-it": "bin/index.js"
+    "new": "bin/new.js"
   },
   "files": [
-    "bin/index.js",
-    "dist/index.js",
-    "dist/index.map"
+    "bin/*.js",
+    "cli/**/*"
   ],
   "scripts": {
     "lint": "eslint --fix .",
     "precommit": "npm run build && lint-staged",
-    "build": "parcel build -o dist/index.js -t node index.js && shebang-it",
+    "build:index": "parcel build -o dist/new.js -t node src/new.js && shebang-it -i new.js",
+    "build:cli": "parcel build -o dist/new-cli.js -t node src/cli.js && shebang-it -i new-cli.js",
+    "build": "yarn build:index && yarn build:cli",
     "prepush": "ava",
     "test": "ava",
     "coverage": "nyc --reporter=html --reporter=text ava"

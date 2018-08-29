@@ -1,3 +1,6 @@
 {
-  "extends": "@brightsole/lint-node"
+  "extends": "@brightsole/lint-node",
+  "rules": {
+    "no-console": "error"
+  }
 }
