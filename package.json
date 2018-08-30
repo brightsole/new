@@ -1,7 +1,7 @@
 {
-  "name": "new",
+  "name": "@brightsole/new",
   "version": "0.0.0",
-  "description": "new",
+  "description": "new project generator",
   "keywords": [
     "cli",
     "util",
