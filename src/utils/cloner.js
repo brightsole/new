@@ -20,13 +20,14 @@ const recursiveClone = (newPathSection, localSection, replaceName) => {
     }
 
     const filePaths = fs.readdirSync(localSection);
-    return filePaths.map(path =>
-      recursiveClone(
-        `${newPathSection}/${path}`,
+    return filePaths.forEach(path => {
+      const ignoreFix = path === 'gitignore' ? '.' : '';
+      return recursiveClone(
+        `${newPathSection}/${ignoreFix}${path}`,
         `${localSection}/${path}`,
         replaceName
-      )
-    );
+      );
+    });
   }
 
   const contents = fs.readFileSync(localSection, { encoding: 'utf8' });

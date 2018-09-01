@@ -39,3 +39,16 @@ test('allows the user to specify a pretty internal name', t => {
     'our cool util, not at all woooooo-js'
   );
 });
+
+test('will for sure copy the .gitignore file across', t => {
+  const mockCliDir = `${__dirname.replace(/\/test\//g, '/src/')}/../cli`;
+  mockFs({
+    [mockCliDir]: {
+      gitignore: 'npm //because they stink',
+    },
+  });
+
+  cloneIt('cli', 'baller-project', {});
+
+  t.deepEqual(fs.readdirSync('./baller-project'), ['.gitignore']);
+});
