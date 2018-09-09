@@ -19,7 +19,8 @@
   },
   "files": [
     "bin/*.js",
-    "cli/**/*"
+    "cli/**/*",
+    "front/**/*"
   ],
   "scripts": {
     "build:index": "parcel build -o dist/new.js -t node src/new.js && shebang-it -i new.js",
