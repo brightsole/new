@@ -43,7 +43,7 @@ const recursiveClone = (newPathSection, localSection, replaceName) => {
  * @param {String} options.name - alternate internal name for the project
  */
 module.exports.default = (type, projectName, options = {}) => {
-  if (type !== 'cli') {
+  if (!['cli', 'front'].includes(type)) {
     runningLog.fatal('No other project types exist at the moment');
     throw new Error();
   }
@@ -56,5 +56,5 @@ module.exports.default = (type, projectName, options = {}) => {
 
   const newProjectDir = `./${projectName}`;
 
-  recursiveClone(newProjectDir, `${__dirname}/../cli`, replaceName);
+  recursiveClone(newProjectDir, `${__dirname}/../${type}`, replaceName);
 };

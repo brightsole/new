@@ -24,6 +24,8 @@
   </summary>
   <br />
 
+
+  ### You can create a variety of project types:
   -------------
 
   #### CLI
@@ -33,12 +35,32 @@
     </summary>
     <br />
 
-  The project `new` only supports the automatic creation of one repo type at the moment: `new cli`. It takes one argument, the folderName, and tries to use that as the app name. You may also specify an alternate to override it with `-n`. More options forthcoming.
+  `New` can create an easy-to-start-with cli project with the command: `new cli`. It takes one argument, the folderName, and tries to use that as the app name. You may also specify an alternate to override it with `-n`. More options forthcoming.
+
+  The new cli has a few nice features: `signale`, for a running log cli system, `commander` **the standard of excellence** for consuming & using command line arguments & options, `lodash` and `ava` for testing.
 
   | Arg | Longform | Description | Example |
   | :---------------: | :---------------: | :--------------- | ---------------: |
   | **\*** |  | folderName/name of the new project | `new cli <folderName>` |
   | **-n** | --pretty-name | custom internal name to override folderName | `new cli ../bingle -n 'super-bingle'` |
+
+  </details>
+
+  -------------
+
+  #### FRONT
+  <details>
+    <summary>
+      tl;dr: <code>new front [new-location-folderName] -[options]</code>
+    </summary>
+    <br />
+
+  `New` also allows you to create a new `frontend` project. It has a few nice features: `jest` for testing, `parcel-bundler` for hot reload and production builds, `axios` for network requests, `styled-components` for css-in-js, and `a-plus-forms` and `a-plus-forms-json-validator` for forms & validation.
+
+  | Arg | Longform | Description | Example |
+  | :---------------: | :---------------: | :--------------- | ---------------: |
+  | **\*** |  | folderName/name of the new project | `new front <folderName>` |
+  | **-n** | --pretty-name | custom internal name to override folderName | `new front ../bingle -n 'bingle-frontend'` |
 
   -------------
 
@@ -52,7 +74,7 @@
 <summary>tl;dr: <strong>LOTS</strong></summary>
 <br />
 
-#### CLI
+#### CLI/FRONT
 1. read git username dynamically from global environment
 2. option to specify git repo location in entirety
 3. post-create hooks to `yarn` and `git-init`
@@ -65,10 +87,6 @@
 4. command for grabbing token for coverage upload and giving it to travis
 5. tool for snyk setup
 6. command for telling snyk to watch the repo
-
-#### FRONTEND
-1. project instantiation
-2. create the cli tool for it
 
 #### SERVERLESS
 1. project instantiation

@@ -9,4 +9,7 @@ runningLog.start('Beginning process');
 global._ = _;
 global.runningLog = runningLog;
 
-program.command('cli <dir>', 'create new cli project').parse(process.argv);
+program
+  .command('cli <dir>', 'create new cli project')
+  .command('front <dir>', 'create new frontend project')
+  .parse(process.argv);
