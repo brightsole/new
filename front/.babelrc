@@ -1,12 +1,17 @@
 {
-  "presets": ["env", "react"],
+  "presets": [
+    ["@babel/preset-env",
+      { "targets": { "node": "current" } }
+    ],
+    "@babel/preset-react"
+  ],
   "plugins": [
-    "transform-class-properties",
-    "transform-object-rest-spread",
-    ["auto-import", {
-      "declarations": [
-        { "default": "React", "members": ["Component", "Fragment"], "path": "react" }
-      ]
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "src": "./src",
+        "test": "./test"
+      }
     }]
   ]
 }
