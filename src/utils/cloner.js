@@ -38,8 +38,9 @@ const recursiveClone = (newPathSection, localSection, replaceName) => {
  * Tries to clone a project into a new directory, changing `new-{TYPE}` into
  * the new project name. Instantiates `recursiveClone`
  *
- * @param {String} [projectName] - new folder to create the project in
- * @param {Object} options - optional file io properties
+ * @param {String} type - type of project to clone
+ * @param {String} projectName - new folder to create project in & default name
+ * @param {Object} [options] - optional file io properties
  * @param {String} options.name - alternate internal name for the project
  */
 module.exports.default = (type, projectName, options = {}) => {
