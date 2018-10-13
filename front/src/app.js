@@ -1,3 +1,4 @@
+import React from 'react';
 import { injectGlobal, ThemeProvider } from 'styled-components';
 import { Article, NavBar } from './layout/nav';
 import { AppLayout } from './layout';

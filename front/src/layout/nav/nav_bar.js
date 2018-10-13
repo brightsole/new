@@ -1,3 +1,4 @@
+import React from 'react';
 import chroma from 'chroma-js';
 import styled from 'styled-components';
 

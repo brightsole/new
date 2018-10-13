@@ -1,20 +1,19 @@
+import React from 'react';
 import { mount, shallow } from 'enzyme';
-import { Article } from '../../../src/layout/nav';
+import { Article } from 'src/layout/nav';
 
-describe('<Article />', () => {
-  it('should render without error', () => {
-    const nav = shallow(<Article />);
-    expect(nav.length).toBe(1);
-  });
+test('should render without error', t => {
+  const nav = shallow(<Article />);
+  t.deepEqual(nav.length, 1);
+});
 
-  it('renders any children properly', () => {
-    const nav = mount(
-      <Article>
-        <h2>This is a child element</h2>
-      </Article>
-    );
-    const titleNode = nav.find('h2');
-    expect(titleNode.length).toBe(1);
-    expect(titleNode.text()).toBe('This is a child element');
-  });
+test('renders any children properly', t => {
+  const nav = mount(
+    <Article>
+      <h2>This is a child element</h2>
+    </Article>
+  );
+  const titleNode = nav.find('h2');
+  t.deepEqual(titleNode.length, 1);
+  t.deepEqual(titleNode.text(), 'This is a child element');
 });

@@ -1,26 +1,25 @@
+import React from 'react';
 import { shallow } from 'enzyme';
-import { AppLayout } from '../../src/layout';
+import { AppLayout } from 'src/layout';
 
-describe('<App />', () => {
-  it('should render without error', () => {
-    const app = shallow(<AppLayout />);
-    expect(app.length).toBe(1);
-  });
+test('should render without error', t => {
+  const app = shallow(<AppLayout />);
+  t.deepEqual(app.length, 1);
+});
 
-  it('renders any children properly', () => {
-    const app = shallow(
-      <AppLayout>
-        <p>Dingle Bop</p>
-        Stuff
-      </AppLayout>
-    );
+test('renders any children properly', t => {
+  const app = shallow(
+    <AppLayout>
+      <p>Dingle Bop</p>
+      Stuff
+    </AppLayout>
+  );
 
-    const divNode = app.find('div');
-    expect(divNode.length).toBe(1);
-    expect(divNode.text()).toBe('Dingle BopStuff');
+  const divNode = app.find('div');
+  t.deepEqual(divNode.length, 1);
+  t.deepEqual(divNode.text(), 'Dingle BopStuff');
 
-    const pNode = app.find('p');
-    expect(pNode.length).toBe(1);
-    expect(pNode.text()).toBe('Dingle Bop');
-  });
+  const pNode = app.find('p');
+  t.deepEqual(pNode.length, 1);
+  t.deepEqual(pNode.text(), 'Dingle Bop');
 });

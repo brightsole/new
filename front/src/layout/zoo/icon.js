@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 
 // https://github.com/google/material-design-icons/blob/master/iconfont/codepoints

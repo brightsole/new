@@ -1,3 +1,4 @@
+import React from 'react';
 import { Form, ValidatorProvider } from 'a-plus-forms';
 import JSONValidator from 'a-plus-forms-json-validator';
 import styled from 'styled-components';
