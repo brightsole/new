@@ -1,4 +1,4 @@
 export default {
-  verbose: true,
-  cache: false,
+  helpers: false,
+  files: ['test/**/*_test.js'],
 };
