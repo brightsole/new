@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import { NavBar } from 'src/layout/nav';
 
 test('should render without error', t => {
@@ -8,8 +8,8 @@ test('should render without error', t => {
 });
 
 test('renders any children properly', t => {
-  const nav = mount(<NavBar />);
+  const nav = render(<NavBar />);
   const titleNode = nav.find('h1');
   t.deepEqual(titleNode.length, 1);
-  t.deepEqual(titleNode.text(), 'new-front');
+  t.deepEqual(titleNode.text(), 'NEW-FRONT');
 });

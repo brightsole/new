@@ -1,4 +1,4 @@
-# new-front
+# @BRIGHTSOLE/NEW-FRONT
 
 ### What is it?
 <details>
@@ -29,7 +29,8 @@
   ```
 
 
-  ##### Some of the scripts, and what they do
+  #### Some of the scripts, and what they do
+
   | Command | Description |
   | :---------------: | :---------------: |
   | `yarn start` | starts a hot reload server running the app |
@@ -39,7 +40,8 @@
   | `yarn lint` | lints the project, trying to fix any issues automatically |
 
 
-  ##### More details:
+  #### More details:
+
   `yarn build` doesn't remove the CNAME file that `gh-pages` puts into the docs directory, if you choose to deploy things using the `master/docs` deployment route on GH.
 
   There's a pre-commit hook that builds production assets on every commit. It might be worthwhile to disable this if you care about your git history being clean. **I really really don't** *however*, so I left it as the default action. `prepush` doesn't push new compiled assets, so you have to run it twice, and that sucks. If you ever want to get moving **fast** leave it in. 
@@ -52,7 +54,7 @@
 
 ### TODO:
 <details>
-<summary>tl;dr: <TODO></summary>
+<summary>tl;dr: </TODO></summary>
 <br />
 
   1. <TODO>

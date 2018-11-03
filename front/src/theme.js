@@ -6,8 +6,14 @@ export const TDefault = {
     aboveDesktop: 'min-width: 1200px',
   },
   color: {
+    warn: '#de7381',
     primary: '#25f7b8',
-    secondary: '#92dde8',
-    will: '#dcbc7a',
+    tertiary: '#dcbc7a',
+    secondary: '#22dde8',
+  },
+  spacing: {
+    medium: '1rem',
+    small: '0.5rem',
+    large: '1.5rem',
   },
 };

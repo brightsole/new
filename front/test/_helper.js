@@ -1,5 +1,8 @@
+const React = require('react');
 const { JSDOM } = require('jsdom');
 const test = require('ava');
+const { ThemeProvider } = require('styled-components');
+const { TDefault } = require('src/theme');
 
 global.test = test;
 
@@ -22,6 +25,12 @@ global.cancelAnimationFrame = callback => {
 };
 
 /* eslint-disable */
-const { configure } = require('enzyme');
+const { configure, mount } = require('enzyme');
 const Adapter = require('enzyme-adapter-react-16');
 configure({ adapter: new Adapter() });
+
+global.render = element => mount(
+  <ThemeProvider theme={TDefault}>
+    {element}
+  </ThemeProvider>
+);

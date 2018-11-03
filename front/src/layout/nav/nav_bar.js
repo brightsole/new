@@ -1,21 +1,20 @@
 import React from 'react';
-import chroma from 'chroma-js';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
   align-self: start;
-  background-color: ${() => chroma('palevioletred').hex()};
+  background-color: ${p => p.theme.color.primary};
   display: flex;
   flex-direction: row;
-  height: 2rem;
+  flex-shrink: 0;
   justify-content: space-between;
-  padding: 0 0.25rem;
+  padding: ${p => p.theme.spacing.small};
   width: 100%;
 `;
 
 const Nav = () => (
   <Wrapper>
-    <h1>new-front</h1>
+    <h1>NEW-FRONT</h1>
   </Wrapper>
 );
 

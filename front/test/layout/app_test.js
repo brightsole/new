@@ -15,10 +15,6 @@ test('renders any children properly', t => {
     </AppLayout>
   );
 
-  const divNode = app.find('div');
-  t.deepEqual(divNode.length, 1);
-  t.deepEqual(divNode.text(), 'Dingle BopStuff');
-
   const pNode = app.find('p');
   t.deepEqual(pNode.length, 1);
   t.deepEqual(pNode.text(), 'Dingle Bop');

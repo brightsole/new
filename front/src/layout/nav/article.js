@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Icon } from '../zoo';
+import { Icon } from 'src/zoo';
 
 const Wrapper = styled.div`
   background-color: white;
   color: black;
   display: flex;
   flex: 1 0;
+  flex-direction: column;
   height: 100%;
   justify-content: flex-start;
   width: 100%;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import { Article } from 'src/layout/nav';
 
 test('should render without error', t => {
@@ -8,7 +8,7 @@ test('should render without error', t => {
 });
 
 test('renders any children properly', t => {
-  const nav = mount(
+  const nav = render(
     <Article>
       <h2>This is a child element</h2>
     </Article>
