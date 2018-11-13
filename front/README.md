@@ -38,6 +38,7 @@
   | `yarn test` | runs through the tests |
   | `yarn coverage` | runs through the tests, outputting coverage into `./coverage` |
   | `yarn lint` | lints the project, trying to fix any issues automatically |
+  | `yarn storybooks` | starts up a storybook server |
 
 
   #### More details:
