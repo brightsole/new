@@ -12,4 +12,5 @@ global.runningLog = runningLog;
 program
   .command('cli <dir>', 'create new cli project')
   .command('front <dir>', 'create new frontend project')
+  .command('package <dir>', 'create new generic npm package project')
   .parse(process.argv);

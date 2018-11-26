@@ -2,6 +2,7 @@ bin
 cli
 dist
 front
+package
 coverage
 .nyc_output
 node_modules

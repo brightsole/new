@@ -1,0 +1,4 @@
+{
+  "extends": "@brightsole/lint-node",
+  "rules": {}
+}

@@ -20,13 +20,15 @@
   "files": [
     "bin/*.js",
     "cli/**/*",
-    "front/**/*"
+    "front/**/*",
+    "package/**/*"
   ],
   "scripts": {
     "build:index": "parcel build -o dist/new.js -t node src/new.js && shebang-it -i new.js",
     "build:cli": "parcel build -o dist/new-cli.js -t node src/cli.js && shebang-it -i new-cli.js",
     "build:front": "parcel build -o dist/new-front.js -t node src/front.js && shebang-it -i new-front.js",
-    "build": "yarn build:index && yarn build:cli && yarn build:front",
+    "build:package": "parcel build -o dist/new-package.js -t node src/package.js && shebang-it -i new-package.js",
+    "build": "yarn build:index && yarn build:cli && yarn build:front && yarn build:package",
     "clean": "rm -rf dist bin .cache .nyc_output coverage",
     "coverage": "nyc --reporter=html --reporter=text ava",
     "lint": "eslint --fix .",

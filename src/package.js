@@ -4,7 +4,7 @@ const program = require('commander');
 const { Signale } = require('signale');
 const { default: cloner } = require('./utils/cloner');
 
-const runningLog = new Signale({ interactive: true, scope: 'new:front' });
+const runningLog = new Signale({ interactive: true, scope: 'new:package' });
 runningLog.start('Beginning process');
 
 global._ = _;
@@ -14,14 +14,14 @@ program
   .arguments('<dir>')
   .option(
     '-n, --pretty-name [string]',
-    'optional internally applied application name'
+    'optional internally applied package name'
   )
   .action((newDir, options) => {
     runningLog.info('Cloning project');
 
-    cloner('front', newDir, options);
+    cloner('package', newDir, options);
 
-    runningLog.success('Cloned new frontend!');
+    runningLog.success('Cloned new package!');
   });
 
 program.parse(process.argv);

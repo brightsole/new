@@ -55,12 +55,30 @@
     </summary>
     <br />
 
-  `New` also allows you to create a new `frontend` project. It has a few nice features: `jest` for testing, `parcel-bundler` for hot reload and production builds, `axios` for network requests, `styled-components` for css-in-js, and `a-plus-forms` and `a-plus-forms-json-validator` for forms & validation.
+  `New` also allows you to create a new `frontend` project. It has a few nice features: `ava` for testing, `parcel-bundler` for hot reload and production builds, `axios` for network requests, `styled-components` anc `chroma-js` for :nail_care:, and `a-plus-forms` and `a-plus-forms-json-validator` for forms & validation.
 
   | Arg | Longform | Description | Example |
   | :---------------: | :---------------: | :--------------- | ---------------: |
   | **\*** |  | folderName/name of the new project | `new front <folderName>` |
   | **-n** | --pretty-name | custom internal name to override folderName | `new front ../bingle -n 'bingle-frontend'` |
+
+  -------------
+
+  #### PACKAGE
+  <details>
+    <summary>
+      tl;dr: <code>new package [new-location-folderName] -[options]</code>
+    </summary>
+    <br />
+
+  `New` also allows you to create a new `package` project. It has a very few nice features: pretty much just `ava` for testing. It just helps you get your foot in the door that much faster.
+
+  It's very likely this will be the first project to have typescript inclusion.
+
+  | Arg | Longform | Description | Example |
+  | :---------------: | :---------------: | :--------------- | ---------------: |
+  | **\*** |  | folderName/name of the new project | `new package <folderName>` |
+  | **-n** | --pretty-name | custom internal name to override folderName | `new package ../qul -n 'qul-dev'` |
 
   -------------
 
@@ -73,12 +91,6 @@
 <details>
 <summary>tl;dr: <strong>LOTS</strong></summary>
 <br />
-
-#### CLI/FRONT
-1. read git username dynamically from global environment
-2. option to specify git repo location in entirety
-3. post-create hooks to `yarn` and `git-init`
-4. properly good tests for cloner util
 
 #### CI
 1. tool for adding travis setup
@@ -93,9 +105,10 @@
 2. create the cli tool for it
 
 #### GENERIC PACKAGE
-1. project instantiation
-2. create the cli tool for it
- 
+1. rework its shebang to have options like the following:
+  1. code transpilation
+  2. typescript type compilation
+
 #### @brightsole/NEW
 1. add it to project-status
 2. generate a couple badges
@@ -104,6 +117,10 @@
 5. report test percentage
 6. report code quality
 8. pre-build clean hook
+9. read git username dynamically from global environment
+10. option to specify git repo location in entirety
+11. post-create hooks to `yarn` and `git-init`
+12. properly good tests for cloner util
 
 </details>
 <br/>
