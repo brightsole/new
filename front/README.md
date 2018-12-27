@@ -1,4 +1,4 @@
-# @BRIGHTSOLE/NEW-FRONT
+# @BRIGHTSOLE/new-front
 
 ### What is it?
 <details>
@@ -27,6 +27,16 @@
   ```sh
   yarn && yarn build && git init && git add . && git remote add origin $YOUR_REPO && git commit -m ':sparkles: init commit!' && git push --set-upstream origin master
   ```
+
+  You might want to change the favicon, it's easy to do. I used [faviconit](http://faviconit.com/en). It's a pretty no-frills quick solution.
+
+  Also, in the build step, the url of the repo is used to make GH-Pages work properly. The following line is where the magic happens:
+
+  ```json
+  parcel build index.html --public-url https://one19.github.io/new-front/
+  ```
+
+  If you're using a custom domain, this is overkill. You could simply do `parcel build index.html` and that should work just fine!
 
 
   #### Some of the scripts, and what they do
