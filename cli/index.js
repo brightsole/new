@@ -15,7 +15,7 @@ program.arguments('[args]').action(async (args, options) => {
 
   await main(args, options);
 
-  runningLog.success('bin-shebanged the file!');
+  runningLog.success('Ran the main function!');
 });
 
 program.parse(process.argv);
