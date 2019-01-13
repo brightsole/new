@@ -8,7 +8,7 @@
     "start": "parcel index.html",
     "clean": "rm -rf docs/*.js docs/*.html docs/*.map dist coverage .cache .nyc_output",
     "prebuild": "yarn clean",
-    "build": "parcel build index.html --public-url https://one19.github.io/worth-the-time/",
+    "build": "parcel build index.html --public-url https://one19.github.io/new-front/",
     "prod": "(cd docs && python -m SimpleHTTPServer 8000)",
     "postbuild": "mkdir docs || true && cp dist/* docs/ && rm -rf docs/*.map",
     "test": "ava",
