@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import styled from 'styled-components';
 import { Icon } from 'src/zoo';
 
@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 const Article = ({ children }) => <Wrapper>{children}</Wrapper>;
 
 Article.propTypes = {
-  children: PropTypes.node,
+  children: propTypes.node,
 };
 
 // render an unset(bug) icon if you're using an empty article

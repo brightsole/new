@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import { Form, ValidatorProvider } from 'a-plus-forms';
 import JSONValidator from 'a-plus-forms-json-validator';
 import styled from 'styled-components';
@@ -23,7 +24,7 @@ const FormWrapper = props => {
 };
 
 FormWrapper.propTypes = {
-  children: React.Element,
+  children: propTypes.node,
   onChange: () => {},
   onError: () => {},
   onSubmit: () => {},

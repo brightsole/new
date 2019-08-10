@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import styled from 'styled-components';
 
 // https://github.com/google/material-design-icons/blob/master/iconfont/codepoints
@@ -18,7 +19,7 @@ const I = styled.i.attrs({
 const Icon = ({ type, ...rest }) => <I {...rest}>{type}</I>;
 
 Icon.propTypes = {
-  type: String,
+  type: propTypes.string,
 };
 
 Icon.defaultProps = {
