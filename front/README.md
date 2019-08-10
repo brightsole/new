@@ -60,6 +60,13 @@
   If someday you want to clean all that out and use something *not* **incredibly shoestring** like `precommit` compiling the assets, it's stupendously easy to clean your git history and keep rolling like you were never in the ghetto at all.
 
 
+  ### PACKAGE EXPLANATIONS:
+  - `ava` requires `@babel/register`
+  - `localforage`/`chroma-js`/`nanoid` are all high-quality utility deps that are good for getting up to speed fast
+  - `a-plus-forms`/`a-plus-forms-json-validator` are both used for forms & are of similar quality
+  - `husky` should never be upgraded beyond 1. It disables the fun tricks used to pre/post build & more
+
+
 </details>
 <br/>
 
