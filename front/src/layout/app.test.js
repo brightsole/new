@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { AppLayout } from 'src/layout';
+import AppLayout from './app';
 
 test('should render without error', t => {
   const app = shallow(<AppLayout />);

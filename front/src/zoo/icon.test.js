@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Icon } from 'src/zoo';
+import Icon from './icon';
 
 test('should render without error', t => {
   const app = shallow(<Icon />);

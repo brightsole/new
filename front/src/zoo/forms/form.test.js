@@ -1,6 +1,6 @@
 import React from 'react';
 import { EmailInput, Form as BaseForm, PasswordInput } from 'a-plus-forms';
-import { Form } from 'src/zoo/forms';
+import Form from './form';
 
 const fakeSchema = {
   email: { type: 'string' },

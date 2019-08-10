@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { NavBar } from 'src/layout/nav';
+import NavBar from './nav_bar';
 
 test('should render without error', t => {
   const nav = shallow(<NavBar />);
