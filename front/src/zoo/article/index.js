@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import styled from 'styled-components';
-import { Icon } from 'src/zoo';
+import Icon from '../icon';
 
 const Wrapper = styled.div`
   background-color: white;

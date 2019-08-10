@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Icon from './icon';
+import Icon from './index';
 
 test('should render without error', t => {
   const app = shallow(<Icon />);

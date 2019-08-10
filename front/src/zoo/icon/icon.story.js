@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import Icon from './icon';
+import Icon from './index';
 
 const iconText = `
   https://github.com/google/material-design-icons/blob/master/iconfont/codepoints

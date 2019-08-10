@@ -12,10 +12,10 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
-const Nav = () => (
+const NavBar = () => (
   <Wrapper>
-    <h1>NEW-FRONT</h1>
+    <h1>new-front</h1>
   </Wrapper>
 );
 
-export default Nav;
+export default NavBar;

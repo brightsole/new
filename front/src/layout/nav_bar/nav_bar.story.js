@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import NavBar from './nav_bar';
+import NavBar from './index';
 
 storiesOf('NavBar', module)
   .add(

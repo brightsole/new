@@ -1,18 +1,18 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import AppLayout from './app';
+import Container from './index';
 
 test('should render without error', t => {
-  const app = shallow(<AppLayout />);
+  const app = shallow(<Container />);
   t.deepEqual(app.length, 1);
 });
 
 test('renders any children properly', t => {
   const app = shallow(
-    <AppLayout>
+    <Container>
       <p>Dingle Bop</p>
       Stuff
-    </AppLayout>
+    </Container>
   );
 
   const pNode = app.find('p');

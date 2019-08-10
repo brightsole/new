@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Article from './article';
+import Article from './index';
 
 test('should render without error', t => {
   const nav = shallow(<Article />);
