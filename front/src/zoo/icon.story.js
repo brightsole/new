@@ -1,23 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { action } from '@storybook/addon-actions';
-import { TextInput, EmailInput } from 'a-plus-forms';
-import Form from 'src/zoo/forms/form';
-import Icon from 'src/zoo/icon';
-
-storiesOf('Form', module).add(
-  'Test submit and change actions easily!',
-  withInfo({
-    text: 'Renders a form with the default config?',
-  })(() => (
-    <Form onSubmit={action('submitted')} onChange={action('changed')}>
-      <EmailInput name="email" label="Input your email plas:" />
-      <TextInput name="name" label="Input your name plas:" />
-      <button type="submit">Submit and observe!</button>
-    </Form>
-  ))
-);
+import Icon from './icon';
 
 const iconText = `
   https://github.com/google/material-design-icons/blob/master/iconfont/codepoints

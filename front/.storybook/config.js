@@ -4,7 +4,7 @@ import { configure, addDecorator } from '@storybook/react';
 import { TDefault as theme } from 'src/theme';
 
 // automatically import all files ending in *.stories.js
-const req = require.context('../stories', true, /.stories.js$/);
+const req = require.context('..', true, /.story.js$/);
 function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
