@@ -1,4 +1,4 @@
 export default {
-  helpers: false,
-  files: ['test/**/*_test.js'],
+  helpers: ['./test/_helper.js'],
+  files: ['./test/**/*_test.js'],
 };
