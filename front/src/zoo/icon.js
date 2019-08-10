@@ -15,6 +15,14 @@ const I = styled.i.attrs({
   font-weight: inherit;
 `;
 
-const Icon = ({ type, ...rest }) => <I {...rest}>{type || 'bug_report'}</I>;
+const Icon = ({ type, ...rest }) => <I {...rest}>{type}</I>;
+
+Icon.propTypes = {
+  type: String,
+};
+
+Icon.defaultProps = {
+  type: 'bug_report',
+};
 
 export default Icon;

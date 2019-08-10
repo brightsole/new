@@ -7,30 +7,33 @@ const StyledForm = styled(Form)`
   flex-direction: row;
 
   input {
-    color: black;
     border: none;
+    color: black;
   }
 `;
 
-export default props => {
-  const {
-    children,
-    onChange = console.log,
-    onSubmit = console.log,
-    onError = console.log,
-    ...rest
-  } = props;
+const FormWrapper = props => {
+  const { children, ...rest } = props;
 
   return (
     <ValidatorProvider validator={JSONValidator}>
-      <StyledForm
-        onChange={onChange}
-        onSubmit={onSubmit}
-        onError={onError}
-        {...rest}
-      >
-        {children}
-      </StyledForm>
+      <StyledForm {...rest}>{children}</StyledForm>
     </ValidatorProvider>
   );
 };
+
+FormWrapper.propTypes = {
+  children: React.Element,
+  onChange: () => {},
+  onError: () => {},
+  onSubmit: () => {},
+};
+
+FormWrapper.defaultProps = {
+  children: '',
+  onChange: console.log,
+  onSubmit: console.log,
+  onError: console.log,
+};
+
+export default FormWrapper;
