@@ -11,5 +11,5 @@ test('renders any children properly', t => {
   const nav = render(<NavBar />);
   const titleNode = nav.find('h1');
   t.deepEqual(titleNode.length, 1);
-  t.deepEqual(titleNode.text(), 'NEW-FRONT');
+  t.deepEqual(titleNode.text(), 'new-front');
 });

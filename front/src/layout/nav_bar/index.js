@@ -10,6 +10,10 @@ const Wrapper = styled.div`
   justify-content: space-between;
   padding: ${p => p.theme.spacing.small};
   width: 100%;
+
+  h1 {
+    text-transform: uppercase;
+  }
 `;
 
 const NavBar = () => (
