@@ -52,3 +52,20 @@ test('will for sure copy the .gitignore file across', t => {
 
   t.deepEqual(fs.readdirSync('./baller-project'), ['.gitignore']);
 });
+
+test('also copies the gitattribues file across', t => {
+  const mockCliDir = `${__dirname.replace(/\/test\//g, '/src/')}/../cli`;
+  mockFs({
+    [mockCliDir]: {
+      gitignore: 'npm //because they stink',
+      gitattributes: 'dist/*.html linguist-generated // who do this?',
+    },
+  });
+
+  cloneIt('cli', 'baller-project', {});
+
+  t.deepEqual(fs.readdirSync('./baller-project'), [
+    '.gitattributes',
+    '.gitignore',
+  ]);
+});

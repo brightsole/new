@@ -21,7 +21,7 @@ const recursiveClone = (newPathSection, localSection, replaceName) => {
 
     const filePaths = fs.readdirSync(localSection);
     return filePaths.forEach(path => {
-      const ignoreFix = path === 'gitignore' ? '.' : '';
+      const ignoreFix = path.match(/^git/) ? '.' : '';
       return recursiveClone(
         `${newPathSection}/${ignoreFix}${path}`,
         `${localSection}/${path}`,
