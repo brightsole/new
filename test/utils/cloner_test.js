@@ -40,6 +40,23 @@ test('allows the user to specify a pretty internal name', t => {
   );
 });
 
+test('replaces _files so sub-package.json files are ignored', t => {
+  const mockCliDir = `${__dirname.replace(/\/test\//g, '/src/')}/../cli`;
+  mockFs({
+    [mockCliDir]: {
+      'package.json': '{ "_files": "some" }',
+    },
+  });
+
+  cloneIt('cli', 'baller-project', {});
+
+  t.deepEqual(fs.readdirSync('./baller-project'), ['package.json']);
+  t.deepEqual(
+    fs.readFileSync('./baller-project/package.json', { encoding: 'utf8' }),
+    '{ "files": "some" }'
+  );
+});
+
 test('will for sure copy the .gitignore file across', t => {
   const mockCliDir = `${__dirname.replace(/\/test\//g, '/src/')}/../cli`;
   mockFs({

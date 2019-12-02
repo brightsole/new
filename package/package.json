@@ -11,7 +11,7 @@
   "repository": "git@github.com:one19/new-package.git",
   "author": "Drew Showalter <maelstroswim@gmail.com>",
   "license": "MIT",
-  "files": [
+  "_files": [
     "index.js",
     "dist/index.js",
     "dist/index.map"

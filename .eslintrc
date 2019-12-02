@@ -1,6 +1,7 @@
 {
   "extends": "@brightsole/lint-node",
   "rules": {
-    "no-console": "error"
+    "no-console": "error",
+    "comma-dangle": "off"
   }
 }

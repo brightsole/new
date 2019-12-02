@@ -6,9 +6,9 @@ const fs = require('fs');
  *
  * @param {String} newPathSection - project folder that mirrors the following local path
  * @param {String} localSection - local filepath being read and cloned
- * @param {String} replaceName - function to replace the `new-{TYPE}` placeholder
+ * @param {String} modifyContent - function to modify file contents on the way to the file system
  */
-const recursiveClone = (newPathSection, localSection, replaceName) => {
+const recursiveClone = (newPathSection, localSection, modifyContent) => {
   const stats = fs.statSync(localSection);
 
   if (stats.isDirectory()) {
@@ -25,14 +25,20 @@ const recursiveClone = (newPathSection, localSection, replaceName) => {
       return recursiveClone(
         `${newPathSection}/${ignoreFix}${path}`,
         `${localSection}/${path}`,
-        replaceName
+        modifyContent
       );
     });
   }
 
   const contents = fs.readFileSync(localSection, { encoding: 'utf8' });
-  return fs.writeFileSync(newPathSection, replaceName(contents));
+  return fs.writeFileSync(newPathSection, modifyContent(contents));
 };
+
+const modifierChain = (...modifierFunctions) => content =>
+  modifierFunctions.reduce(
+    (result, modifierFunction) => modifierFunction(result),
+    content
+  );
 
 /**
  * Tries to clone a project into a new directory, changing `new-{TYPE}` into
@@ -54,8 +60,14 @@ module.exports.default = (type, projectName, options = {}) => {
 
   const RE_NAME_REPLACE = new RegExp(`new-${type}`, 'g');
   const replaceName = contents => contents.replace(RE_NAME_REPLACE, name);
+  const renameFilesExclusion = contents =>
+    contents.replace(/"_files":/, '"files":');
 
   const newProjectDir = `./${projectName}`;
 
-  recursiveClone(newProjectDir, `${__dirname}/../${type}`, replaceName);
+  recursiveClone(
+    newProjectDir,
+    `${__dirname}/../${type}`,
+    modifierChain(replaceName, renameFilesExclusion)
+  );
 };
