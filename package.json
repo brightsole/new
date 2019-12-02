@@ -44,18 +44,18 @@
     ]
   },
   "devDependencies": {
-    "@brightsole/eslint-config-lint-node": "0.0.5",
-    "ava": "^2.2.0",
-    "husky": "^0.14.2",
-    "lint-staged": "^9.2.1",
-    "mock-fs": "^4.10.1",
+    "@brightsole/eslint-config-lint-node": "^1.0.1",
+    "ava": "^2.4.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "mock-fs": "^4.10.4",
     "nyc": "^14.1.1",
-    "parcel-bundler": "^1.12.3",
+    "parcel-bundler": "^1.12.4",
     "shebang-it": "0.0.6"
   },
   "dependencies": {
-    "commander": "^3.0.0",
-    "lodash": "4.17.10",
+    "commander": "^4.0.1",
+    "lodash": "^4.17.15",
     "signale": "^1.4.0"
   }
 }
