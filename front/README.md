@@ -60,6 +60,12 @@
   If someday you want to clean all that out and use something *not* **incredibly shoestring** like `precommit` compiling the assets, it's stupendously easy to clean your git history and keep rolling like you were never in the ghetto at all.
 
 
+  ### Some more helpful stuff:
+  [aws planning](https://cloudcraft.co/)
+  [image compression](https://compressor.io/)
+  [package chonk analysis](https://bundlephobia.com/)
+  [fingerprinting](https://github.com/Valve/fingerprintjs2)
+
   ### PACKAGE EXPLANATIONS:
   - `ava` requires `@babel/register`
   - `localforage`/`chroma-js`/`nanoid` are all high-quality utility deps that are good for getting up to speed fast
